@@ -1,3 +1,6 @@
+---
+permalink: /debates/venezuela
+---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -9,7 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Background Image Setup:
+               1. We use a linear-gradient with high opacity (0.9) of the gray-900 color (#111827).
+               2. This sits ON TOP of the image, darkening it significantly so text remains readable.
+            */
+            background: linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps background static while scrolling */
+            background-repeat: no-repeat;
+        }
         
         /* Custom scrollbar for raw transcript */
         pre::-webkit-scrollbar {
@@ -47,43 +61,46 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white p-4 md:p-8">
+<body class="text-white p-4 md:p-8">
 
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-yellow-500">Venezuela Intervention Debate</h1>
-            <p class="text-lg md:text-xl text-gray-400 mt-2">Young Americans for Liberty (YAL) vs. College Republicans</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-yellow-500 drop-shadow-md">Venezuela Intervention Debate</h1>
+            <p class="text-lg md:text-xl text-gray-400 mt-2 drop-shadow-sm">Young Americans for Liberty (YAL) vs. College Republicans</p>
         </header>
 
         <main class="space-y-16">
 
+            <!-- INTRO -->
             <section id="introductions">
-                 <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">The Premise</h2>
+                 <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3 drop-shadow-sm">The Premise</h2>
                  <div class="flex flex-col space-y-4">
-                    <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-center w-full border border-gray-600">
+                    <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-center w-full border border-gray-600">
                          <h4 class="text-sm font-semibold mb-2 text-gray-400 uppercase text-center">Moderator</h4>
                          <p class="text-gray-300 mt-1 text-center">
                              US forces have seized Venezuelan leader Nicolas Maduro and brought him to the United States. We are here to debate: Was this action justified? Is this the "America First" way?
                          </p>
                      </div>
-                     <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
+                     <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
                          <h4 class="text-sm font-semibold mb-2 text-yellow-400">YAL (Anthony)</h4>
                          <p class="text-gray-300 mt-1">Anthony Cacciato represents the Constitutionalist/Skeptic view. He questions the legality of the intervention and the long-term consequences of "policing" the hemisphere.</p>
                      </div>
-                     <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
+                     <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
                          <h4 class="text-sm font-semibold mb-2 text-red-400 text-right">REPUBLICAN (Will)</h4>
                          <p class="text-gray-300 mt-1 text-right">William Branson Donaghue represents the Interventionist/Hawk view. He advocates for a revived Monroe Doctrine and absolute US dominance in the Western Hemisphere.</p>
                      </div>
                  </div>
             </section>
 
+            <!-- TOPIC 1 -->
             <section id="constitutionality">
-                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">Topic 1: Constitutionality & War Powers</h2>
+                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3 drop-shadow-sm">Topic 1: Constitutionality & War Powers</h2>
                 <div class="mb-12">
-                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center">Does the President have the authority to seize a foreign leader?</h3>
+                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center drop-shadow-sm">Does the President have the authority to seize a foreign leader?</h3>
                     <div class="flex flex-col space-y-4">
                         
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
+                        <!-- ANTHONY (YAL) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
                             <h4 class="text-sm font-semibold mb-2 text-yellow-400">YAL (Anthony) - Argument</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>We are a country of laws, not "whatever the last guy did."</li>
@@ -92,7 +109,8 @@
                             </ul>
                         </div>
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
+                        <!-- WILL (REP) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
                             <h4 class="text-sm font-semibold mb-2 text-red-400 text-right">REPUBLICAN (Will) - Response</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>The President has "Police Power" for limited strikes regarding national security.</li>
@@ -105,13 +123,15 @@
                 </div>
             </section>
 
+            <!-- TOPIC 2 -->
             <section id="jurisdiction">
-                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">Topic 2: Jurisdiction & "The Empire"</h2>
+                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3 drop-shadow-sm">Topic 2: Jurisdiction & "The Empire"</h2>
                 <div class="mb-12">
-                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center">Does the US have jurisdiction over Venezuela?</h3>
+                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center drop-shadow-sm">Does the US have jurisdiction over Venezuela?</h3>
                     <div class="flex flex-col space-y-4">
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
+                        <!-- ANTHONY (YAL) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
                             <h4 class="text-sm font-semibold mb-2 text-yellow-400">YAL (Anthony) - Argument</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>Does the US have legal jurisdiction outside its own borders?</li>
@@ -120,7 +140,8 @@
                             </ul>
                         </div>
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
+                        <!-- WILL (REP) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
                             <h4 class="text-sm font-semibold mb-2 text-red-400 text-right">REPUBLICAN (Will) - Response</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li><strong>"The only thing that matters... is the use of force."</strong></li>
@@ -134,13 +155,15 @@
                 </div>
             </section>
 
+            <!-- TOPIC 3 -->
             <section id="history">
-                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">Topic 3: Historical Precedent</h2>
+                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3 drop-shadow-sm">Topic 3: Historical Precedent</h2>
                 <div class="mb-12">
-                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center">Panama vs. Iraq: The Intervention Model</h3>
+                    <h3 class="text-2xl font-medium text-gray-300 mb-6 text-center drop-shadow-sm">Panama vs. Iraq: The Intervention Model</h3>
                     <div class="flex flex-col space-y-4">
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
+                        <!-- WILL (REP) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
                             <h4 class="text-sm font-semibold mb-2 text-red-400 text-right">REPUBLICAN (Will) - Argument</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>1947 was the turning point where we wrongly became "World Police" (Globalism).</li>
@@ -150,7 +173,8 @@
                             </ul>
                         </div>
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
+                        <!-- ANTHONY (YAL) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
                             <h4 class="text-sm font-semibold mb-2 text-yellow-400">YAL (Anthony) - Rebuttal</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>Even swift interventions risk "stabilization work" (peacekeeping).</li>
@@ -163,15 +187,18 @@
                 </div>
             </section>
 
+            <!-- Q&A Section -->
             <section id="qa">
-                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">Q&A Highlights</h2>
+                <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3 drop-shadow-sm">Q&A Highlights</h2>
                 
+                <!-- Question 1 -->
                 <div class="mb-12">
-                    <h3 class="text-2xl font-medium text-gray-300 mb-2 text-center">On Risking American Lives</h3>
+                    <h3 class="text-2xl font-medium text-gray-300 mb-2 text-center drop-shadow-sm">On Risking American Lives</h3>
                     <p class="text-lg text-gray-400 italic text-center mb-6 px-4">"Will, you say 'America First,' but putting troops in Venezuela risks American lives. How does that jibe?"</p>
                     <div class="flex flex-col space-y-4">
                         
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
+                        <!-- WILL (REP) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-end border-r-4 border-red-500">
                             <h4 class="text-sm font-semibold mb-2 text-red-400 text-right">REPUBLICAN (Will)</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>"Abroad" means Europe/Asia. The Americas are our backyard.</li>
@@ -181,7 +208,8 @@
                             </ul>
                         </div>
 
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
+                        <!-- ANTHONY (YAL) -->
+                        <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-xl p-5 max-w-lg self-start border-l-4 border-yellow-500">
                             <h4 class="text-sm font-semibold mb-2 text-yellow-400">YAL (Anthony)</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>Troops on the ground leads to peacekeeping, which leads to quagmires.</li>
@@ -193,9 +221,10 @@
 
             </section>
 
+            <!-- FULL TRANSCRIPT -->
             <section id="full-transcript" class="mt-16">
-                <details class="bg-gray-800 rounded-lg shadow-lg">
-                    <summary class="text-2xl font-semibold p-6 cursor-pointer hover:bg-gray-700 rounded-lg text-yellow-500">
+                <details class="bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-lg">
+                    <summary class="text-2xl font-semibold p-6 cursor-pointer hover:bg-gray-700/50 rounded-lg text-yellow-500">
                         View Full Transcript (Cleaned)
                     </summary>
                     <div class="p-6 md:p-10 border-t border-gray-600">
@@ -204,7 +233,7 @@
 Moderator: Hello everyone. Thank you all for coming out to hear this amazing conversation on Venezuela. A little backstory: This started just after US forces were able to seize and arrest Nicholas Maduro for his crimes and bring him to justice in the United States. We've had a disagreement between Anthony and Will on this topic. We thought it would be appropriate because we are all on the same side, part of the same movement. I’m going to turn it over to Will and Anthony to open the conversation: Are the United States' actions against Venezuela justified? Are they good? Should we be following the "Don-Rogue" doctrine?
 
 [00:01:21] THE CONSTITUTIONALITY ARGUMENT
-Anthony (YAL): Thank you for having us. It's important to remember that we can disagree and still be on the same side. Having a free Venezuela—one free from the horrors of socialism, operating on free-market principles with self-determination—is desirable. No one here is opposed to a free Venezuelan people. But we have to dig into the issues of how we get there.
+Anthony (YAL): Thank you for having us. It's important to remember that we can disagree and still be on the same side. Having a free Venezuela—one free from the horrors of socialism, operating on free-market principles with self-determination is desirable. No one here is opposed to a free Venezuelan people. But we have to dig into the issues of how we get there.
 
 Look at Iraq and Afghanistan; between those, there was a Congressional Authorization for Use of Military Force (AUMF). That is the important linchpin. Whether or not you agree with intervening, you have to do it by the Constitution. We are not a country of "whatever the last guy did." We are a country of laws. The AUMF is vested within the legislative branch. A system with checks and balances requires the input of our elected representatives in the legislature.
 
