@@ -1975,6 +1975,22 @@ All right Thank you to the debaters for participating and researching Thank you 
              // Should only be reached if all retries fail
             throw new Error('Max retries reached. API is busy or encountered persistent errors.');
         }
+                const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const card = document.getElementById('video-card');
+                const ghost = document.getElementById('video-placeholder');
+                
+                if (!entry.isIntersecting) {
+                    card.classList.add('is-floating');
+                    ghost.style.display = 'block';
+                } else {
+                    card.classList.remove('is-floating');
+                    ghost.style.display = 'none';
+                }
+            });
+        }, { threshold: 0 });
+
+        observer.observe(document.getElementById('video-boundary'));
     </script>
 
 </body>
