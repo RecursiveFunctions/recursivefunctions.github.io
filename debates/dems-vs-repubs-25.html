@@ -70,6 +70,44 @@ permalink: /debates/dems-vs-repubs-25
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+                /* The Ghost Placeholder keeps the page from jumping when the video floats */
+        #video-placeholder {
+            display: none;
+        }
+
+        #video-card.is-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            z-index: 100;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border: 2px solid #eab308;
+            border-radius: 0.75rem;
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8) translateY(20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .is-floating .video-header {
+            background: #eab308;
+            color: #111827;
+        }
+
+        pre::-webkit-scrollbar { width: 8px; height: 8px; }
+        pre::-webkit-scrollbar-track { background: #374151; }
+        pre::-webkit-scrollbar-thumb { background: #6b7280; border-radius: 4px; }
+        
+        details > summary { list-style: none; transition: background-color 0.2s ease-in-out; }
+        details > summary::-webkit-details-marker { display: none; }
+        details > summary::after {
+            content: '+'; float: right; font-size: 2rem; font-weight: 300;
+            line-height: 1.2; transition: transform 0.2s ease-in-out;
+        }
+        details[open] > summary::after { content: '−'; }
     </style>
 </head>
 <body class="bg-gray-900 text-white p-4 md:p-8">
@@ -81,7 +119,40 @@ permalink: /debates/dems-vs-repubs-25
         </header>
 
         <main class="space-y-16">
-
+            <!-- Video Section -->
+            <div id="video-boundary" class="relative">
+                <!-- This div stays in place so the page doesn't collapse -->
+                <div id="video-placeholder" class="aspect-video w-full rounded-xl bg-gray-800/20 mb-12"></div>
+                
+            <div id="video-card" class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-2xl mb-12 transition-all duration-300 group">
+                <div class="video-header p-3 border-b border-gray-700 flex justify-between items-center bg-gray-900/40">
+                    <span class="text-[10px] font-bold uppercase tracking-widest opacity-70">Debate Video</span>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                        <span class="text-[10px] font-bold">READY</span>
+                    </div>
+                </div>
+                
+                <div 
+                    class="aspect-video w-full relative cursor-pointer group-hover:opacity-90 transition-opacity" 
+                    onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/CmZdU7DbyDE?autoplay=1&rel=0\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'"
+                >
+                    <img 
+                        src="https://img.youtube.com/vi/CmZdU7DbyDE/maxresdefault.jpg" 
+                        alt="Debate Video Thumbnail" 
+                        class="w-full h-full object-cover"
+                    >
+                    
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg transition-transform transform group-hover:scale-110">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
             <section id="introductions">
                  <h2 class="text-3xl font-semibold mb-8 border-b-2 border-gray-600 pb-3">Introductions & Rules</h2>
                  <div class="flex flex-col space-y-4">
